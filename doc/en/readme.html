@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Page and Document Summary</title></head>
+<body>
+<h1>Page and Document Summary</h1>
+<p>Brings a JAWS-style Insert+Q summary to NVDA. The summary is different for each kind of document, and can be spoken on request or announced automatically when the document loads.</p>
+<h2>What is summarized</h2>
+<ul>
+<li>Web pages (Edge, Chrome, Firefox and other browsers): landmarks, headings, links, form fields, tables, lists and graphics. For example "Page has 3 landmarks, 12 headings, 45 links."</li>
+<li>PDF documents (in browsers and Adobe Acrobat): the same structure counts. If no headings, lists or tables are found, you are told the PDF may be untagged or scanned, so you know reading order may be poor.</li>
+<li>E-books (in reading programs such as Thorium Reader, Calibre's viewer and Kindle for PC, and .epub files opened in a browser): the structure of the current page of the book.</li>
+<li>Word: pages, words, headings, tables, lists, links, images and objects, comments, tracked changes, footnotes and endnotes. It also checks for images without alternative text, tables without a header row, and heading levels that skip.</li>
+<li>Excel: number of sheets (and hidden ones), the current sheet's used rows and columns, tables, charts, pivot tables, objects, comments, links, formulas, and whether the sheet is protected.</li>
+<li>PowerPoint: number of slides, the current slide and its title, hidden slides, tables and charts, slides without a title, and pictures without alternative text.</li>
+</ul>
+<h2>Commands</h2>
+<ul>
+<li>NVDA+Shift+Q: speaks the summary for the document you are in.</li>
+<li>NVDA+Shift+Q twice quickly: opens a detailed view. For web pages, PDFs and e-books it lists the heading outline and landmarks. For Word it lists the heading outline, tables, images without alternative text, comments and tracked changes. For Excel it lists the sheets, tables, charts and named ranges. For PowerPoint it lists every slide title. Press Escape to close it.</li>
+<li>NVDA+Control+Shift+Q: turns the automatic summary on or off.</li>
+<li>NVDA+Alt+Shift+Q: shows diagnostic information: which program and window NVDA sees, whether it could connect to Word, Excel or PowerPoint (and the exact error if not), and what it found in a web page, PDF or e-book. Use this when a summary does not work, and include the report when asking for help.</li>
+</ul>
+<p>Shortcuts can be changed in NVDA menu, Preferences, Input gestures, under "Page Summary".</p>
+<h2>Automatic summary</h2>
+<ul>
+<li>Web pages, PDFs and e-books are announced when they finish loading. A document that loads in a background tab is announced when you first switch to it. Refreshes and returning to the same document do not repeat it. PDFs in browsers load their content late, so they are announced after a short extra wait.</li>
+<li>Word, Excel and PowerPoint documents are announced once, when the document window first gets focus. Empty new documents are not announced.</li>
+<li>If NVDA's "Automatic Say All on page load" option is on, the summary for browse mode documents is spoken first, immediately. Otherwise it follows the delay set in the settings (default 1000 milliseconds).</li>
+<li>NVDA menu, Preferences, Settings, Page Summary lets you turn automatic summaries on or off for each document type, change the delay, and add the program names of other e-book readers.</li>
+</ul>
+<h2>Notes and limits</h2>
+<ul>
+<li>Word, Excel and PowerPoint summaries need the desktop versions of Microsoft Office to be running at the same permission level as NVDA. If Office is busy, for example showing a dialog, NVDA says it could not read the document.</li>
+<li>In Word, headings are counted from the built-in Heading styles.</li>
+<li>Documents opened in Protected View are supported where Office allows it.</li>
+<li>Office is reached through the document window, the same way NVDA itself reads Word, so it does not depend on Office being registered with Windows. Run NVDA and Office at the same permission level: both normal, or both as administrator.</li>
+<li>Very large documents are measured for a limited time, so counts may be announced as "at least" a number.</li>
+<li>The e-book program names are a best guess. If your reader is not announced, add its program name in the settings.</li>
+</ul>
+</body></html>
